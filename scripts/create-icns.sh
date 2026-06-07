@@ -7,7 +7,7 @@ set -e
 
 # Locate repo root and icons dir
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 ICONS_DIR="$REPO_ROOT/source"
 
 # Ensure at least one PNG exists
