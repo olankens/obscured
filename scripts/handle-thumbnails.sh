@@ -12,6 +12,6 @@ for i in "${!ALL[@]}"; do
 	[ -e "$PNG" ] || continue
 	BNM="$(basename "$PNG" .png)"
 	[ -e "$OUT/thumbnail-${BNM}.avif" ] && continue
-	COL=$([ $((i % 2)) -eq 0 ] && echo "#cccccc" || echo "#888888")
+	COL=$([ $((i % 2)) -eq 0 ] && echo "#BAE6FD" || echo "#7DD3FC")
 	magick "$PNG" -bordercolor "$COL" -border 144 png:- | avifenc --stdin --input-format png "$OUT/thumbnail-${BNM}.avif"
 done
