@@ -2,7 +2,7 @@
 
 <p><img src=".assets/preview-01.avif" align="center" width="100%"></p>
 
-...
+Curated dark-only icon pack built specifically for modern macOS, offering well-structured ICNS files with proper padding and formatting that match the refined visual style of contemporary Apple design.
 
 ## Pack Collection
 
