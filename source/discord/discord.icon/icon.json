@@ -6,18 +6,10 @@
     {
       "layers" : [
         {
-          "fill-specializations" : [
-            {
-              "appearance" : "dark",
-              "value" : {
-                "automatic-gradient" : "srgb:1.00000,1.00000,1.00000,1.00000"
-              }
-            }
-          ],
-          "image-name" : "discord.svg",
+          "image-name" : "discord.png",
           "name" : "discord",
           "position" : {
-            "scale" : 6.4,
+            "scale" : 2.4,
             "translation-in-points" : [
               0,
               0

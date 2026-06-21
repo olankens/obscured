@@ -3,7 +3,7 @@
 # shellcheck disable=SC2012,SC2034,SC2129
 
 # Fail fast
-set -e
+set -euo pipefail
 
 # Locate repo root and icons dir
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"

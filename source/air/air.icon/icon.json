@@ -6,11 +6,10 @@
     {
       "layers" : [
         {
-          "glass" : true,
-          "image-name" : "air.svg",
+          "image-name" : "air.png",
           "name" : "air",
           "position" : {
-            "scale" : 12.5,
+            "scale" : 2.5000000000000004,
             "translation-in-points" : [
               0,
               0

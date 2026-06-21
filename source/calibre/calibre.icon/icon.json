@@ -6,6 +6,8 @@
     {
       "layers" : [
         {
+          "glass" : true,
+          "hidden" : false,
           "image-name" : "calibre.svg",
           "name" : "calibre",
           "position" : {
