@@ -19,5 +19,4 @@ for NUM in "${!ALL[@]}"; do
 		"$TMP/$(basename "$PNG")"
 done
 
-magick montage "$TMP"/*.png -tile 8x4 -geometry +0+0 png:- | avifenc --stdin --input-format png "$OUT"
-echo "Generated $OUT"
+{ magick montage "$TMP"/*.png -tile 8x4 -geometry +0+0 png:- | avifenc --stdin --input-format png "$OUT"; } || true
