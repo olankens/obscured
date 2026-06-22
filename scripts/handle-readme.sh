@@ -13,7 +13,7 @@ for NUM in "${!ALL[@]}"; do
 	ALN=$([ "$NUM" -lt $((MAX - (MAX % 9 == 0 ? 9 : MAX % 9))) ] && echo ' align="center"' || echo '')
 	BNM=$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")
 	FOL="${BNM%.avif}"
-	TXT="${TXT}<a href=\"source/${FOL}/${BNM}\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"11.1111111111%\"></a>"
+	TXT="${TXT}<a href=\"source/${FOL}/${BNM%%.*}.icns\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"11.1111111111%\"></a>"
 done
 awk -v BLK="<p>${TXT}</p>" '
 	/<!-- START_BLOCK -->/ { print; print BLK; skip=1; next }
