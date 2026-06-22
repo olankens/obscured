@@ -6,12 +6,12 @@
     {
       "layers" : [
         {
-          "image-name" : "conductor.png",
-          "name" : "conductor",
+          "image-name" : "conductor 2.png",
+          "name" : "conductor 2",
           "position" : {
             "scale" : 2.3000000000000003,
             "translation-in-points" : [
-              -10,
+              0,
               0
             ]
           }

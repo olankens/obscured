@@ -6,10 +6,10 @@
     {
       "layers" : [
         {
-          "image-name" : "discord.png",
-          "name" : "discord",
+          "image-name" : "discord 2.png",
+          "name" : "discord 2",
           "position" : {
-            "scale" : 2.4,
+            "scale" : 2.3000000000000003,
             "translation-in-points" : [
               0,
               0

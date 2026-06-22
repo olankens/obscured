@@ -6,9 +6,8 @@
     {
       "layers" : [
         {
-          "glass" : true,
-          "image-name" : "mpv.png",
-          "name" : "mpv",
+          "image-name" : "mpv 2.png",
+          "name" : "mpv 2",
           "position" : {
             "scale" : 2.4000000000000004,
             "translation-in-points" : [
