@@ -7,11 +7,11 @@ SRC="$DIR/../source"
 OUT="$DIR/../.assets"
 
 mapfile -t ALL < <(find "$SRC" -maxdepth 2 -name "*.png" | sort)
-for i in "${!ALL[@]}"; do
-	PNG="${ALL[$i]}"
+for NUM in "${!ALL[@]}"; do
+	PNG="${ALL[$NUM]}"
 	[ -e "$PNG" ] || continue
 	BNM="$(basename "$PNG" .png)"
 	[ -e "$OUT/thumbnail-${BNM}.avif" ] && continue
-	COL=$([ $((i % 2)) -eq 0 ] && echo "#BAE6FD" || echo "#7DD3FC")
+	COL=$([ $((NUM % 2)) -eq 0 ] && echo "#e2e8f0" || echo "#cbd5e1") # Slate 200 / Slate 300
 	magick "$PNG" -bordercolor "$COL" -border 144 png:- | avifenc --stdin --input-format png "$OUT/thumbnail-${BNM}.avif"
 done
