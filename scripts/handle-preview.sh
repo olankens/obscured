@@ -7,6 +7,8 @@ SRC="$DIR/../source"
 OUT="$DIR/../.assets/preview-01.avif"
 TMP="$(mktemp -d)"
 
+
+
 mapfile -t ALL < <(find "$SRC" -maxdepth 2 -name "*.png" | sort | head -n 32)
 for NUM in "${!ALL[@]}"; do
 	PNG="${ALL[$NUM]}"

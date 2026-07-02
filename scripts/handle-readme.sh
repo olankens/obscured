@@ -5,18 +5,20 @@ set -euo pipefail
 DIR="$(cd "$(dirname "$0")" && pwd)"
 RME="$DIR/../README.md"
 SRC="$DIR/../.assets"
+MAX=6
 
 ALL=("$SRC"/thumbnail*.avif)
-MAX=${#ALL[@]}
-TXT=""
+TXT="<table>"
 for NUM in "${!ALL[@]}"; do
-	ALN=$([ "$NUM" -lt $((MAX - (MAX % 8 == 0 ? 8 : MAX % 8))) ] && echo ' align="center"' || echo '')
+	((NUM % MAX == 0)) && TXT="${TXT}$([ "$NUM" -ne 0 ] && echo '</tr></tbody>')<tbody><tr>" || true
 	BNM=$(basename "${ALL[$NUM]}" | sed "s/^thumbnail-//")
 	FOL="${BNM%.avif}"
-	TXT="${TXT}<a href=\"source/${FOL}/${BNM%%.*}.icns\"><img src=\".assets/$(basename "${ALL[$NUM]}")\"${ALN} width=\"12.5%\"></a>"
+	TXT="${TXT}<td><a href=\"source/${FOL}/${BNM%%.*}.icns\"><img src=\".assets/$(basename "${ALL[$NUM]}")\" align=\"center\" width=\"99999\"></a></td>"
 done
-awk -v BLK="<p>${TXT}</p>" '
-	/<!-- START_BLOCK -->/ { print; print BLK; skip=1; next }
-	/<!-- CEASE_BLOCK -->/ { skip=0 }
-	!skip
+TXT="${TXT}</tr></tbody></table>"
+
+awk -v BLK="$TXT" '
+  /<!-- START_BLOCK -->/ { print; print BLK; skip=1; next }
+  /<!-- CEASE_BLOCK -->/ { skip=0 }
+  !skip
 ' "$RME" >"$RME.tmp" && mv "$RME.tmp" "$RME"
