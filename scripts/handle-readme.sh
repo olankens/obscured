@@ -5,7 +5,7 @@ set -euo pipefail
 DIR="$(cd "$(dirname "$0")" && pwd)"
 RME="$DIR/../README.md"
 SRC="$DIR/../.assets"
-MAX=6
+MAX=7
 
 ALL=("$SRC"/thumbnail*.avif)
 TXT="<table>"
