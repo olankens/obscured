@@ -6,10 +6,21 @@
     {
       "layers" : [
         {
-          "image-name" : "crossover.png",
-          "name" : "crossover",
+          "blend-mode" : "normal",
+          "fill-specializations" : [
+            {
+              "value" : "automatic"
+            },
+            {
+              "appearance" : "dark",
+              "value" : "automatic"
+            }
+          ],
+          "glass" : true,
+          "image-name" : "Vector.svg",
+          "name" : "Vector",
           "position" : {
-            "scale" : 2.6,
+            "scale" : 2.55,
             "translation-in-points" : [
               0,
               0

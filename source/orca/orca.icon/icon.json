@@ -6,12 +6,12 @@
     {
       "layers" : [
         {
-          "image-name" : "Image.png",
-          "name" : "Image",
+          "image-name" : "orca.png",
+          "name" : "orca",
           "position" : {
-            "scale" : 0.73,
+            "scale" : 2.4000000000000004,
             "translation-in-points" : [
-              -20,
+              0,
               0
             ]
           }
