@@ -5,7 +5,7 @@ set -euo pipefail
 DIR="$(cd "$(dirname "$0")" && pwd)"
 RME="$DIR/../README.md"
 SRC="$DIR/../source"
-MAX=5
+MAX=4
 
 ALL=("$SRC"/*/*.png)
 TXT="<table>"

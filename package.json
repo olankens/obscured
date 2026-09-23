@@ -9,7 +9,7 @@
     "prepare": "simple-git-hooks"
   },
   "cspell": {
-    "words": []
+    "words": ["utm"]
   },
   "commitlint": {
     "extends": ["@commitlint/config-conventional"],
